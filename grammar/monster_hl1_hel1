@@ -1,0 +1,99 @@
+# FILE STRUCTURE:
+# every line starting with '#' is ignored.
+#the first two values are
+#
+#min_HL
+1
+#min_HEL
+1
+#
+#
+# then the emission probabilities: A,C,G,U
+0.25
+0.25
+0.25
+0.25
+# then the emissions probabilties for pairs:
+#AA, AC, AG, AU
+0
+0
+0
+0.225
+#CA, CC, CG, CU
+0
+0
+0.225
+0
+#GA, GC, GG, GU
+0
+0.225
+0
+0.05
+#UA, UC, UG, UU
+0.225
+0
+0.05
+0
+#
+#
+#then come the rule probabilities in the following order
+#
+#Z -> .
+1
+#A -> (^min_HEL L )^min_HEL
+1
+#P -> ( L )
+1
+#C -> Z C
+0.7815
+#C -> Z
+0.2185
+#H -> Z H
+0.8461
+#H -> Z
+0.1539
+#B -> Z B
+0.6092
+#B -> Z
+0.3908
+#U -> Z U
+0.8233
+#U -> eps
+0.1767
+#T -> C
+0.1733
+#T -> A
+0.1577
+#T -> C A
+0.3481
+#T -> A T
+0.0988
+#T -> C A T
+0.2221
+#F -> Z^(min_HL-1) H
+1
+#G -> B A
+0.1523
+#G -> A B
+0.1668
+#G -> BAB
+0.6808
+#M -> U A O
+1
+#O -> U A N
+1
+#N -> U A N
+0.3810
+#N -> U
+0.6190
+#L -> F
+0.0804
+#L -> P
+0.7430
+#L -> G
+0.1447
+#L -> M
+0.0319
+#S -> T
+1
+#and that's it.
